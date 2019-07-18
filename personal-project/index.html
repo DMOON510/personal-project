@@ -1,34 +1,59 @@
-<!DOCUMENT html>
+<!DOCTYPE html>
 <html>
 <head>
-  <link href="https://fonts.googleapis.com/css?family=DM+Serif+Display&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Bowlby+One+SC&display=swap" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
   <header>
     <h1>What am I craving?</h1>
+    <div class = "navbar">
+      <div class = "topbar">
+      <a class = "active" href = "index.html">Home</a>
+      <a href = "#sweet">Sweet</a>
+      <a href = "#savory">Savory</a>
+      <a href = "#beverages">Beverages</a>
+    </div>
   </header>
-  <!-- <div class= "firstButtons"> -->
-  <div>
-    <button class="firstButtons" id="sweetInit">Sweet</button>
-    <button class="firstButtons" id="savoryInit">Savory</button>
-    <button class="firstButtons" id="beverageInit">Beverages</button>
-
-    <button id="cake" class="sweetButtons">Cake</button>
-    <button id="cookies" class="sweetButtons">Cookies</button>
-    <button id="pastries" class="sweetButtons">Pastries</button>
-
-    <button class="savoryButtons" id="pizza">Pizza</button>
-    <button class="savoryButtons" id="chicken">Chicken</button>
-    <button class="savoryButtons" id="pasta">Pasta</button>
-
-    <button class="beverageButtons" id="coffee">Coffee</button>
-    <button class="beverageButtons" id="tea">Tea</button>
+  <div class= "allButtons">
+  <div class = "firstButtons">
+    <button class="sweet"><img src = "https://cdn3.iconfinder.com/data/icons/bazza-christmas-and-new-year/60/candy-512.png"></button>
+    <button class="savory"><img src = "https://cdn3.iconfinder.com/data/icons/food-drinks-1-1/128/steak-512.png"></button>
+    <button class="beverages"><img src = "https://cdn4.iconfinder.com/data/icons/drinks-solid-icons-vol-1/72/28-512.png"></button>
   </div>
-  <footer>
-  </footer>
+  <div class = "sweetButtons">
+    <button class= "cake"><img src = "https://image.flaticon.com/icons/png/512/836/836515.png"></button>
+    <button class= "cookies"><img src = "https://cdn.iconscout.com/icon/premium/png-256-thumb/cookie-111-582107.png"></button>
+    <button class= "pastries"><img src = "https://png.pngtree.com/svg/20160805/8a29577b9c.svg"></button>
+  </div>
+  <div class="savoryButtons">
+    <button class="pizza"><img src = "https://static.thenounproject.com/png/7914-200.png"></button>
+    <button class="chicken"><img src = "https://cdn4.iconfinder.com/data/icons/fast-food-6/512/chicken_wing_fast_food-512.png"></button>
+    <button class="pasta"><img src = "https://cdn.iconscout.com/icon/free/png-256/pasta-58-819237.png"></button>
+    </div>
+  <div class = "beverageButtons">
+    <button class="coffee"><img src = "https://png.pngtree.com/svg/20160714/d51538fd9c.svg"></button>
+    <button class="tea"><img src = "https://cdn1.iconfinder.com/data/icons/convention-and-exhibition-center/100/Tea_Cup_Steam-512.png"></button>
+  </div>
+</div>
+  <div>
+    <center>
+      <h1 class = "link-to-recipe"></h1>
+    </center>
+  </div>
+  <article class="content">
+    <section class="user-input">
+      <input class="name" type="text" placeholder="Input your favorite recipes here!">
+      <input class="submit-btn" type="submit" value="Add recipe">
+    </section>
+    <section class="card-container">
+      <h2> Saved Recipes: </h2>
+    <!-- this is empty because we start with no user info  -->
+    </section>
+  </article>
+</body>
+<!-- to do list ^ -->
 <script src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script type="text/javascript" src="index.js"></script>
 </body>
 </html>
-
