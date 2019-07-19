@@ -1,56 +1,161 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <link href="https://fonts.googleapis.com/css?family=Bowlby+One+SC&display=swap" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="styles.css">
-</head>
-<body>
-  <header>
-    <h1>What am I craving?</h1>
-    <div class = "navbar">
-      <div class = "topbar">
-      <a class = "active" href = "index.html">Home</a>
-      <a href = "#sweet">Sweet</a>
-      <a href = "#savory">Savory</a>
-      <a href = "#beverages">Beverages</a>
-    </div>
-  </header>
-  <div class= "allButtons">
-  <div class = "firstButtons">
-    <button class="sweet"><img src = "https://cdn3.iconfinder.com/data/icons/bazza-christmas-and-new-year/60/candy-512.png"></button>
-    <button class="savory"><img src = "https://cdn3.iconfinder.com/data/icons/food-drinks-1-1/128/steak-512.png"></button>
-    <button class="beverages"><img src = "https://cdn4.iconfinder.com/data/icons/drinks-solid-icons-vol-1/72/28-512.png"></button>
-  </div>
-  <div class = "sweetButtons">
-    <button class= "cake"><img src = "https://image.flaticon.com/icons/png/512/836/836515.png"></button>
-    <button class= "cookies"><img src = "https://cdn.iconscout.com/icon/premium/png-256-thumb/cookie-111-582107.png"></button>
-    <button class= "pastries"><img src = "https://png.pngtree.com/svg/20160805/8a29577b9c.svg"></button>
-  </div>
-  <div class="savoryButtons">
-    <button class="pizza"><img src = "https://static.thenounproject.com/png/7914-200.png"></button>
-    <button class="chicken"><img src = "https://cdn4.iconfinder.com/data/icons/fast-food-6/512/chicken_wing_fast_food-512.png"></button>
-    <button class="pasta"><img src = "https://cdn.iconscout.com/icon/free/png-256/pasta-58-819237.png"></button>
-    </div>
-  <div class = "beverageButtons">
-    <button class="coffee"><img src = "https://png.pngtree.com/svg/20160714/d51538fd9c.svg"></button>
-    <button class="tea"><img src = "https://cdn1.iconfinder.com/data/icons/convention-and-exhibition-center/100/Tea_Cup_Steam-512.png"></button>
-  </div>
-  </div>
-  <article class="content">
-    <section class="user-input">
-      <input class="name" type="text" placeholder="Input your favorite recipes here!">
-      <input class="submit-btn" type="submit" value="Add recipe">
-    </section>
-    <section class="card-container">
-      <h2> Saved Recipes: </h2>
-    <!-- this is empty because we start with no user info  -->
-    </section>
-  </article>
-  <iframe id="myIframe" src="">
-  </iframe>
-</body>
-<!-- to do list ^ -->
-<script src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<script type="text/javascript" src="index.js"></script>
-</body>
-</html>
+/* #411410
+#D14033
+#E7877E
+#FCD7D4 */
+
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: Helvetica;
+}
+img {
+  height: 100px;
+}
+body {
+  background-color: #FFFFFF;
+}
+
+iframe {
+  display: none;
+  height: 417.2px;
+  width: 60%;
+}
+
+header {
+  background-color: #411410;
+  height: 150px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+h1 {
+  font-family: 'Bowlby One SC', cursive;
+  font-size: 50px;
+  color: #FCD7D4;
+  margin-left: 60px;
+  width: 50%;
+  display: flex;
+  justify-content: flex-start;
+}
+
+div {
+  height: 75%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-around;
+}
+
+button {
+  width: 150px;
+  height: 150px;
+  background-color: #E7877E;
+  border: none;
+  border-radius: 12px;
+  margin: 15px;
+}
+
+.allButtons {
+  float:left;
+  margin-left: 145px;
+  width: 40%;
+  margin-top: 190px;
+}
+
+/* button settings */
+.sweetButtons {
+  display: none;
+}
+
+.savoryButtons {
+  display: none;
+}
+
+.beverageButtons {
+  display: none;
+}
+.navbar {
+  background-color: #411410;
+  height: 30%;
+  width: 50%;
+  justify-content: right;
+  float: right;
+  margin-right: 0px;
+}
+.navbar a {
+  color: #FCD7D4;
+  padding: 15px;
+  font-size: 20px;
+  /* float: right; */
+  text-decoration: none;
+  padding-right: 10px;
+}
+.topbar {
+  margin-left: 45%;
+}
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.content {
+  height: 70%;
+  width: 40%;
+  float: right;
+}
+
+.user-input {
+  display: flex;
+  flex-direction: column;
+  background: #FCD7D4;
+}
+
+.name {
+  width: 300px;
+  margin: 25px auto 5px auto;
+  padding: 5px;
+  font-size: 90%;
+}
+
+.submit-btn {
+  width: 300px;
+  padding: 5px;
+  margin: 5px auto 25px auto;
+  background: #D14033;
+  border: none;
+  border-radius: 2px;
+  color: #fff;
+  font-size: 100%;
+}
+
+.card-container {
+  height: 452px;
+  padding: 30px;
+  background: #E7877E;
+}
+
+h2 {
+  color: #411410;
+  font-size: 120%;
+  margin-bottom: 10px;
+}
+
+.name-card {
+  color: #411410;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  padding: 8px;
+  width: 350px;
+  background: #FCD7D4;
+  height: 50px;
+}
+
+.delete-btn {
+  border-radius: 2px;
+  width: 20px;
+  height: 20px;
+
+}
